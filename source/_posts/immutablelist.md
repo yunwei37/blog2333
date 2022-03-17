@@ -272,6 +272,10 @@ ImmutableListFactory 的核心是 concat 函数，它会先判断是否存在相
   }
 ```
 
+除了这个 ImmutableList，其实更重要的是一个 ImmutableMap，它是一个可持久化的 AVL 树实现。大佬已经写过 ImmutableMap 的源码解析了[2]，所以我打算用 rust 再实现一下 ImmutableMap，具体可以参考：
+[/_posts/immutablemap.md](/_posts/immutablemap.md)
+
+
 ## 参考资料
 
 1. [Persistent_data_structure](https://en.wikipedia.org/wiki/Persistent_data_structure)
