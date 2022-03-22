@@ -11,6 +11,8 @@ tags: notes
 
 本文在 io_uring-echo-server 的基础上增添了一个简易的协程实现，完整的 demo 代码实现在这里：[github.com/yunwei37/co-uring-WebServer/blob/master/demo/io_uring_coroutine_echo_server.cpp](https://github.com/yunwei37/co-uring-WebServer/blob/master/demo/io_uring_coroutine_echo_server.cpp)
 
+<!-- more -->
+
 ## 协程实现
 
 原先的代码包含一个 event loop，大致是这样（忽略具体细节），进行 IO 和完成 IO 的逻辑是完全分开的：
