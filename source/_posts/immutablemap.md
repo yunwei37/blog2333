@@ -14,6 +14,8 @@ ImmutableMap 是一种可持久化数据结构，在进行插入或删除操作�
 
 这里参考的是 llvm 中的 ImmutableMap/ImmutableSet 实现，采用一个平衡因子为 2 的 AVL 树[2]:
 
+<!-- more -->
+
 > ImmutableSet is an immutable (functional) set implementation based on an AVL tree. Adding or removing elements is done through a Factory object and results in the creation of a new ImmutableSet object. If an ImmutableSet already exists with the given contents, then the existing one is returned; equality is compared with a FoldingSetNodeID. The time and space complexity of add or remove operations is logarithmic in the size of the original set.
 > There is no method for returning an element of the set, you can only check for membership.
 

@@ -12,6 +12,8 @@ ImmutableList 顾名思义，即不可变链表。它是一种可持久化数据
 
 > 在计算中，持久数据结构或非临时数据结构是一种在修改时始终保留其先前版本的数据结构。这样的数据结构实际上是不可变的，因为它们的操作不会（明显地）就地更新结构，而是总是产生一个新的更新结构。该术语是在 Driscoll、Sarnak、Sleator 和 Tarjans 1986 年的文章中引入的。[1]这些类型的数据结构在逻辑和函数式编程中特别常见，[2]因为这些范式中的语言不鼓励（或完全禁止）使用可变数据。
 
+<!-- more -->
+
 在 `clang static analyzer` 里面可能也会遇见到不少使用 `ImmutableList` 的情况，是通过使用 `REGISTER_LIST_WITH_PROGRAMSTATE` 宏，来达成在 `ProgramState` 中添加一个 list 记录相关数据的目的：
 
 ```cpp

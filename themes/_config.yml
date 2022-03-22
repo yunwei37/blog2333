@@ -54,6 +54,7 @@ menu:
   archives: /archives/ || fas fa-folder-open
   categories: /categories/ || fas fa-layer-group
   tags: /tags/ || fas fa-tags
+  memo: /backlogs/ || fas fa-tags
   # You can add a secondary menu like follow.
   # xxx1: javascript:; || fa(s|r|l|d|b) fa-xxx
 
