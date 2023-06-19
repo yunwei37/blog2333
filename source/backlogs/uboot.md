@@ -1,3 +1,8 @@
+---
+title: uboot
+type: "memo"
+date: 2000-03-22 02:31:48
+---
 # uboot
 
 ## compile
