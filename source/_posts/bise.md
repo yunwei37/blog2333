@@ -1,8 +1,8 @@
 ---
-title: 毕业论文（设计）: 基于 WebAssembly 的云原生时空数据分析技术研究：以 GPlates 为例
+title: '毕业论文（设计）: 基于 WebAssembly 的云原生时空数据分析技术研究：以 GPlates 为例'
 
 date: 2023-05-30T08:41:06-08:00
-tags: 'WebAssembly' 'GIS'
+tags: WebAssembly GIS
 ---
 
 Github repo: <https://github.com/yunwei37/gplates-wasm>
