@@ -33,7 +33,3 @@
   <img align="center" width="49%" src="./metrics-lang-notable.svg" />
 </a>
 <!--  -->
-
-### My Stats
-
-<div align="center">
