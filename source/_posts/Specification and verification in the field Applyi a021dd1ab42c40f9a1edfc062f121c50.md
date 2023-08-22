@@ -1,7 +1,7 @@
 ---
 title: 论文阅读：将形式化方法应用于 Linux 内核中的 BPF 即时编译器
 date: 2023-03-22T18:41:06-08:00
-tags: notes
+tags: notes ai
 ---
 
 OSDI 论文：[https://www.usenix.org/system/files/osdi20-nelson.pdf](https://www.usenix.org/system/files/osdi20-nelson.pdf)

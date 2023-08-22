@@ -110,6 +110,7 @@ navbar:
         Categories: /categories
         Tags: /tags
         About: /about
+        Projects: /projects
     # Links to be shown on the right of the navigation bar
     links:
         Download on GitHub:
@@ -256,8 +257,8 @@ widgets:
         type: links
         # Names and URLs of the sites
         links:
+            eunomia-bpf: https://eunomia.dev
             Hexo: https://hexo.io
-            Bulma: https://bulma.io
     # Categories widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
