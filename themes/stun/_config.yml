@@ -134,24 +134,23 @@ header:
   enable: true
   show_on:
     # Whether to show on the article page.
-    post: true
+    post: false
   # If you set a percentage, it will be calculated based on the height of screen (Supports all CSS units)
   height: 80%
   # Background image of site header.
   bg_image:
-    enable: false
+    enable: true
     # In theme directory (source/images): /images/avatar.png
     # In site directory (source/uploads): /uploads/avatar.png
     # You can also use a link of image.
-    url:
-  # Banner area.
+    url: /images/bg.jpg
   banner:
     # Effective for all pages.
     enable: true
     # You can override it by `header_title` in Front-Matter of .md
-    title: Hello Stun
+    title: yunwei37's blog
     # You can override it by `header_subtitle` in Front-Matter of .md
-    subtitle: An elegant theme for Hexo
+    subtitle: '云微的杂物堆'
   # Mask effect of the background image.
   mask:
     enable: false
