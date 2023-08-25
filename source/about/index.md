@@ -1,7 +1,7 @@
 # 郑昱笙
 
-- 手机：+8613372543711 
-- 邮箱：<3180102760@zju.edu.cn>
+- 手机：+8613372543711
+- 邮箱：<yunwei356@gmail.com> / <1067852565@qq.com>
 - Github：[github.com/yunwei37](https://github.com/yunwei37)
 - Website: [www.yunwei37.com](https://www.yunwei37.com/)
 
@@ -42,9 +42,9 @@
 
 ### 项目经历
 
-#### eunomia-bpf
+#### [eunomia-bpf 开源社区](https://eunomia.dev/)
 
-- **简介**：专注于简化 eBPF 程序的编写、分发和动态加载流程，探索 eBPF 和 Wasm、AI 结合的技术开源社区。
+- **简介**：专注于简化 eBPF 程序的编写、分发和动态加载流程，探索 eBPF 和 Wasm、AI 结合的技术的开源社区。
 - **时间**：2022年03月 - 至今
 - **角色**：创始人和主要开发者
 - **成果**：

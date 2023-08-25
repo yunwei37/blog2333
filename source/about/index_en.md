@@ -1,7 +1,7 @@
 # Zheng Yusheng
 
 - **Phone**: +8613372543711
-- **Email**: <3180102760@zju.edu.cn>
+- **Email**: <yunwei356@gmail.com> / <1067852565@qq.com>
 - **Github**: [github.com/yunwei37](https://github.com/yunwei37)
 - **Website**: [www.yunwei37.com](https://www.yunwei37.com/)
 
@@ -42,7 +42,7 @@
 
 ## Projects
 
-### eunomia-bpf
+### [eunomia-bpf Open Source Organization](https://eunomia.dev/)
 
 - **Description**: Focused on simplifying the writing, distribution, and dynamic loading process of eBPF programs, exploring the open-source community technology combining eBPF with Wasm and AI.
 - **Duration**: March 2022 - Present
