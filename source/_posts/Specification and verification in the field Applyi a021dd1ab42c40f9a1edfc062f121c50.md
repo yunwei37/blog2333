@@ -8,13 +8,13 @@ OSDI 论文：[https://www.usenix.org/system/files/osdi20-nelson.pdf](https://ww
 
 yutube [https://www.youtube.com/watch?v=2V3ts5-W_9g](https://www.youtube.com/watch?v=2V3ts5-W_9g)
 
-## 摘要：
+## 摘要
 
 本文描述了我们在 Linux 内核的关键组件之一，即 Berkeley Packet Filter（BPF）虚拟机的即时编译器（“JITs”）上应用形式化方法的经验。我们使用 Jitterbug 验证这些 JITs，Jitterbug 是第一个能够提供精确 JIT 正确性规范并能够排除现实世界中错误的框架，以及一种可扩展到实际实现的自动化证明策略。使用 Jitterbug，我们已经设计、实现和验证了一个新的 BPF JIT，用于 32 位 RISC-V，发现并修复了其他五个 JIT 中的 16 个先前未知的 bug，并开发了新的 JIT 优化；所有这些更改都已经被上游到 Linux 内核。结果表明，在仔细设计规范和证明策略的情况下，可以在一个大型未经验证的系统中构建一个验证组件。
 
 据我们所知，Jitterbug是第一款提供了规范的工具，可以排除实际JIT实现中的错误，并提供了一种证明策略，可以将自动化验证扩展到一类编译器。通过规范和证明策略的精心设计，它展示了在正在积极开发的大型未经验证的系统（即Linux内核）中构建已验证组件（即BPF JIT）的可行性。本文描述了我们的设计决策以及背后的原理（§8）。
 
-## 贡献:
+## 贡献
 
 为了应对这些挑战，Jitterbug做出了以下贡献:
 • 关于JIT正确性的精确逐步规范(§4)。该规范将BPF和目标架构都建模为抽象机器，并将JIT正确性表述为运行带有源BPF指令和JIT生成的目标指令的机器的行为等效性。该规范假定JIT一次只能翻译一个源指令。这个假设与实际的BPF JIT实现相匹配，避免了需要推理整个程序翻译的需要。
@@ -82,7 +82,7 @@ error writing to stream port
   system error: Broken pipe; errno=3
 ```
 
-see 
+see
 
 [https://github.com/emina/rosette/issues/88](https://github.com/emina/rosette/issues/88)
 
@@ -259,8 +259,8 @@ RV32 JIT分为两个部分：Racket实现在`racket/rv32/bpf_jit_comp32.rkt`中�
 
 - 对于riscv32而言，支持验证过程和收尾过程的有限支持。
 - 对于呼叫/退出指令，支持有限:
-    - `BPF_CALL`，`BPF_TAIL_CALL`和`BPF_EXIT` 在riscv32和riscv64上支持；
-    - `BPF_CALL`和`BPF_EXIT`在arm32和arm64上支持。
+  - `BPF_CALL`，`BPF_TAIL_CALL`和`BPF_EXIT` 在riscv32和riscv64上支持；
+  - `BPF_CALL`和`BPF_EXIT`在arm32和arm64上支持。
 
 验证做出了以下假设：
 

@@ -238,7 +238,7 @@ public:
 
     当 ImmutableListFactory 析构时，所有创建的链表内存都会被回收。
 
-ImmutableListFactory 的核心是 concat 函数，它会先判断是否存在相同的链表，如果是则直接返回，不是的话就在头部创建一个新的节点，然后把新的节点插入 Cache 中。这样每次创建一个新的链表实际上的开销只有一个头结点，即 O(1); 
+ImmutableListFactory 的核心是 concat 函数，它会先判断是否存在相同的链表，如果是则直接返回，不是的话就在头部创建一个新的节点，然后把新的节点插入 Cache 中。这样每次创建一个新的链表实际上的开销只有一个头结点，即 O(1);
 
 ```cpp
     template <typename ElemT>
@@ -276,7 +276,6 @@ ImmutableListFactory 的核心是 concat 函数，它会先判断是否存在相
 
 除了这个 ImmutableList，其实更重要的是一个 ImmutableMap，它是一个可持久化的 AVL 树实现。大佬已经写过 ImmutableMap 的源码解析了[2]，所以我打算用 rust 再实现一下 ImmutableMap，具体可以参考：
 [/_posts/immutablemap.md](/_posts/immutablemap.md)
-
 
 ## 参考资料
 
