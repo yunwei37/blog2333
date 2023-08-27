@@ -1,5 +1,5 @@
 ---
-title: 自然语言编程: 从 AutoGPT 往前迈的一小步
+title: '自然语言编程: 从 AutoGPT 往前迈的一小步'
 date: 2023-06-13T18:41:06-08:00
 tags: notes gpt ai
 ---
