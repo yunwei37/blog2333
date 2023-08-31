@@ -1,20 +1,24 @@
-# wasm-serverless-edge-gis
+---
+title: wasm serverless edge gis
+
+date: 2023-01-14T08:41:06-08:00
+tags: ['notes', 'WebAssembly']
+---
 
 ## table of contents
 
 <!-- TOC -->
 
-- [wasm-serverless-edge-gis](#wasm-serverless-edge-gis)
-  - [table of contents](#table-of-contents)
-  - [background](#background)
-    - [Introduce to wasm](#introduce-to-wasm)
-    - [Introduce to serverless](#introduce-to-serverless)
-    - [边缘计算](#边缘计算)
-    - [wasm + serverless + edge？](#wasm--serverless--edge)
-  - [serverless + gis: 现有进展](#serverless--gis-现有进展)
-  - [wasm + gis: 现有进展](#wasm--gis-现有进展)
-  - [边缘计算 + GIS？](#边缘计算--gis)
-  - [毕设?](#毕设)
+- [table of contents](#table-of-contents)
+- [background](#background)
+  - [Introduce to wasm](#introduce-to-wasm)
+  - [Introduce to serverless](#introduce-to-serverless)
+  - [边缘计算](#边缘计算)
+  - [wasm + serverless + edge？](#wasm--serverless--edge)
+- [serverless + gis: 现有进展](#serverless--gis-现有进展)
+- [wasm + gis: 现有进展](#wasm--gis-现有进展)
+- [边缘计算 + GIS？](#边缘计算--gis)
+- [毕设?](#毕设)
 
 <!-- /TOC -->
 
@@ -66,7 +70,7 @@ Serverless计算尤其是FaaS函数计算，简化了计算资源的供给，极
 
 基于上述分析，将Serverless无服务器计算的特征进行归纳：资源的解耦和服务化、自动弹性伸缩、按使用量计费等；相应带来的优势有低运维、低成本、高弹性、高可用等。
 
-- https://zhuanlan.zhihu.com/p/425433134
+- <https://zhuanlan.zhihu.com/p/425433134>
 
 ### 边缘计算
 
@@ -240,7 +244,7 @@ Serverless计算尤其是FaaS函数计算，简化了计算资源的供给，极
     SIGCOMM '22: Proceedings of the ACM SIGCOMM 2022 Conference
 
 - Sledge: A serverless-first, light-weight wasm runtime for the edge
-    
+
     <https://dl.acm.org/doi/abs/10.1145/3423211.3425680>
 
 - Faasm: Lightweight Isolation for Efficient Stateful Serverless Computing
@@ -249,7 +253,7 @@ Serverless计算尤其是FaaS函数计算，简化了计算资源的供给，极
 
     We introduce Faaslets, a new isolation abstraction for high-performance serverless computing. Faaslets isolate the memory of executed functions using \emph{software-fault isolation} (SFI), as provided by WebAssembly, while allowing memory regions to be shared between functions in the same address space. Faaslets can thus avoid expensive data movement when functions are co-located on the same machine. Our runtime for Faaslets, Faasm, isolates other resources, e.g. CPU and network, using standard Linux cgroups, and provides a low-level POSIX host interface for networking, file system access and dynamic loading. To reduce initialisation times, Faasm restores Faaslets from already-initialised snapshots. We compare Faasm to a standard container-based platform and show that, when training a machine learning model, it achieves a 2× speed-up with 10× less memory; for serving machine learning inference, Faasm doubles the throughput and reduces tail latency by 90%.
 
-    https://arxiv.org/abs/2002.09344
+    <https://arxiv.org/abs/2002.09344>
 
     Shillaker S, Pietzuch P. Faasm: Lightweight isolation for efficient stateful serverless computing[C]//2020 {USENIX} Annual Technical Conference ({USENIX}{ATC} 20). 2020: 419-433.
 
