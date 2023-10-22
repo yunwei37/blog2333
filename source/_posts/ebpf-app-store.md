@@ -50,7 +50,7 @@ OCI 镜像格式主要由两部分组成：**manifest** 和 **layers**。Manifes
 
 首先，我们来看一下 OCI 镜像的 **manifest**。Manifest 是一个 JSON 文件，它包含了镜像的元数据，例如镜像的配置和构成镜像的各个层。一个典型的 manifest 文件可能看起来像这样：
 
-```
+```json
 {
   "schemaVersion": 2,
   "mediaType": "application/vnd.oci.image.manifest.v1+json",
@@ -68,7 +68,6 @@ OCI 镜像格式主要由两部分组成：**manifest** 和 **layers**。Manifes
     ...
   ]
 }
-
 ```
 
 在这个例子中，`config` 字段指向了一个包含镜像配置的 JSON 文件的摘要（digest），而 `layers` 字段则是一个数组，包含了构成镜像的各个层的信息。每一层都有一个媒体类型（mediaType）、大小（size）和摘要（digest）。
