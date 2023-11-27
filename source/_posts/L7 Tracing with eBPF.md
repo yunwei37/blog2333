@@ -4,8 +4,6 @@ date: 2023-06-13T18:41:06-08:00
 tags: notes gpt ai
 ---
 
-# L7 Tracing with eBPF: HTTP and Beyond via Socket Filters and Syscall Tracing
-
 In today's technology landscape, with the rise of microservices, cloud-native applications, and complex distributed systems, observability of systems has become a crucial factor in ensuring their health, performance, and security. Especially in a microservices architecture, application components may be distributed across multiple containers and servers, making traditional monitoring methods often insufficient to provide the depth and breadth needed to fully understand the behavior of the system. This is where observing seven-layer protocols such as HTTP, gRPC, MQTT, and more becomes particularly important.
 
 Seven-layer protocols provide detailed insights into how applications interact with other services and components. In a microservices environment, understanding these interactions is vital, as they often serve as the root causes of performance bottlenecks, failures, and security issues. However, monitoring these protocols is not a straightforward task. Traditional network monitoring tools like tcpdump, while effective at capturing network traffic, often fall short when dealing with the complexity and dynamism of seven-layer protocols.

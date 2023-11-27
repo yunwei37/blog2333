@@ -4,7 +4,6 @@ date: 2023-09-27T08:41:06-08:00
 tags: notes ebpf
 ---
 
-# The Evolution and Impact of eBPF: A list of Key Research Papers from Recent Years
 
 This is a list of eBPF related papers I read in recent years, might be helpful for people who are interested in eBPF related research.
 

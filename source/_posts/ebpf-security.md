@@ -4,7 +4,6 @@ date: 2023-10-27T08:41:06-08:00
 tags: notes ebpf
 ---
 
-# The Secure Path Forward for eBPF runtime: Challenges and Innovations
 
 Yusheng Zheng
 

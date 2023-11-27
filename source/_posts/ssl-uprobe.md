@@ -4,8 +4,6 @@ date: 2023-06-13T18:41:06-08:00
 tags: ebpf tutorial
 ---
 
-# eBPF Practical Tutorial: Capturing SSL/TLS Plain Text Data Using uprobe
-
 With the widespread use of TLS in modern network environments, tracing microservices RPC messages has become increasingly challenging. Traditional traffic sniffing techniques often face limitations in accessing only encrypted data, preventing a genuine observation of the original communication content. This restriction poses significant obstacles to system debugging and analysis.
 
 However, a new solution is now available. Through the use of eBPF technology and its capability to perform probing in user space, a method has emerged to regain plain text data, allowing us to intuitively view the pre-encrypted communication content. Nevertheless, each application might utilize different libraries, and each library comes in multiple versions, introducing complexity to the tracking process.
