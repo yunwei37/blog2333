@@ -53,7 +53,7 @@ This will build the CPU version of llama.cpp. See <https://github.com/ggerganov/
 ## 3. run inference
 
 ```console
-$ ./llama.cpp/llama-simple -m Downloads/Meta-Llama-3.1-8B-Instruct-Q3_K_L.gguf -p "Hello my name is"
+$ ./llama.cpp/llama-simple -m Downloads/Meta-Llama-3.1-8B-Instruct-Q3_K_L.gguf -p "Can you write me a poem about santa cruz?" -n 300
 llama_model_loader: loaded meta data with 33 key-value pairs and 292 tensors from Downloads/Meta-Llama-3.1-8B-Instruct-Q3_K_L.gguf (version GGUF V3 (latest))
 llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
 llama_model_loader: - kv   0:                       general.architecture str              = llama
@@ -160,15 +160,51 @@ llama_new_context_with_model:        CPU compute buffer size =  8480.01 MiB
 llama_new_context_with_model: graph nodes  = 1030
 llama_new_context_with_model: graph splits = 1
 
-main: n_predict = 32, n_ctx = 131072, n_kv_req = 32
+main: n_predict = 300, n_ctx = 131072, n_kv_req = 300
 
-<|begin_of_text|>Hello my name is Emily and I am a 22 year old student. I am currently studying at university and I am looking for a part-time job to
+<|begin_of_text|>Can you write me a poem about santa cruz??
+Here is a poem about Santa Cruz:
+Santa Cruz, a town by the sea
+Where redwoods tower, and the ocean's glee
+Meets the waves that crash on the shore
+A place where wonder waits, and magic's in store
 
-main: decoded 27 tokens in 3.14 s, speed: 8.61 t/s
+The boardwalk beckons, a colorful sight
+Games and treats, a joyful delight
+The smell of saltwater taffy fills the air
+As laughter and excitement are everywhere
 
-llama_print_timings:        load time =    4894.55 ms
-llama_print_timings:      sample time =       4.17 ms /    28 runs   (    0.15 ms per token,  6709.80 tokens per second)
-llama_print_timings: prompt eval time =     273.96 ms /     5 tokens (   54.79 ms per token,    18.25 tokens per second)
-llama_print_timings:        eval time =    3104.34 ms /    27 runs   (  114.98 ms per token,     8.70 tokens per second)
-llama_print_timings:       total time =    8030.47 ms /    32 tokens
+The mountains rise high, a verdant green
+Where hikers roam, and nature's secrets are seen
+The rivers flow, a winding stream
+Where fish and wildlife thrive, and the wild things beam
+
+Santa Cruz, a place of enchantment and play
+Where the spirit of adventure comes out to stay
+A town that's full of life, and a heart that's true
+A place where dreams come alive, and magic shines through. 
+
+I hope you enjoy it! Let me know if you have any other requests. 
+
+Here is a revised version of the poem, with a few changes to make it more concise and flowing:
+
+Santa Cruz, a town by the sea
+Where redwoods tower, and the ocean's glee
+Meets the waves that crash on the shore
+A place where wonder waits, and magic's in store
+
+The boardwalk's colorful lights shine bright
+Games and treats, a joyful delight
+Saltwater taffy scents the salty air
+
+
+main: decoded 289 tokens in 34.22 s, speed: 8.44 t/s
+
+llama_print_timings:        load time =    5114.71 ms
+llama_print_timings:      sample time =      48.04 ms /   290 runs   (    0.17 ms per token,  6036.76 tokens per second)
+llama_print_timings: prompt eval time =     536.32 ms /    11 tokens (   48.76 ms per token,    20.51 tokens per second)
+llama_print_timings:        eval time =   33864.35 ms /   289 runs   (  117.18 ms per token,     8.53 tokens per second)
+llama_print_timings:       total time =   39337.08 ms /   300 tokens
 ```
+
+Seems nice! The CPU inference is not that slow, and the poem is quite good!
