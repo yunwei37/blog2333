@@ -5,7 +5,6 @@ date: 2024-08-27T08:41:06-08:00
 tags: notes
 ---
 
-
 ## Introduction 
 
 Userspace-kernel interaction is a key performance determinant in operating systems, particularly when considering the needs of modern distributed systems and datacenter environments. Traditional methods, like system calls, introduce significant overhead, leading to inefficiencies in I/O processing, context switching, and resource management. As applications demand higher throughput, lower latency, and more scalable solutions, researchers have explored novel approaches to optimizing the boundary between userspace and kernelspace. 
@@ -56,11 +55,14 @@ The interaction between userspace and kernelspace is a critical factor in determ
 
 Each approach offers valuable insights into how the traditional boundaries between userspace and kernelspace can be redefined to meet the needs of modern computing environments. While these solutions offer significant performance improvements, they come with trade-offs in terms of complexity, hardware dependency, and application-specific applicability. As computing systems evolve, the need for tailored solutions that balance these trade-offs will remain a critical challenge for researchers and system architects. 
 
-References 
+## References 
+ 
 
-1. Belay, A., Prekas, G., Klimovic, A., Grossman, S., Kozyrakis, C., & Bugnion, E. (2014). IX: A protected dataplane operating system for high throughput and low latency. Proceedings of the 11th USENIX Symposium on Operating Systems Design and Implementation (OSDI 14), 49–65. USENIX Association. https://www.usenix.org/conference/osdi14/technical-sessions/presentation/belay 
-2. Soares, L., Stumm, M., & Levis, P. (2009). Speculator: A framework for speculative execution in distributed file systems. Proceedings of the 22nd ACM Symposium on Operating Systems Principles (SOSP), 249–264. ACM. https://doi.org/10.1145/1629575.1629599 
-3. Boon, H. J., Blott, M., Dobrescu, M., & Ganne, E. (2021). Demikernel: A datapath operating system for microsecond-scale datacenter systems. Proceedings of the 28th ACM Symposium on Operating Systems Principles (SOSP), 195–212. ACM. https://doi.org/10.1145/3477132.3483559 
-4. Peter, S., Li, J., & Zhang, J. (2009). A new approach to operating system kernel structures. Proceedings of the 14th ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS), 115–128. ACM. https://doi.org/10.1145/1508244.1508258 
+1. Belay, A., Prekas, G., Klimovic, A., Grossman, S., Kozyrakis, C., & Bugnion, E. (2014). {IX}: a protected dataplane operating system for high throughput and low latency. In 11th USENIX Symposium on Operating Systems Design and Implementation (OSDI 14) (pp. 49-65).
+2. Nightingale, E. B., Chen, P. M., & Flinn, J. (2005). Speculative execution in a distributed file system. ACM SIGOPS operating systems review, 39(5), 191-205.
+3. Zhang, I., Raybuck, A., Patel, P., Olynyk, K., Nelson, J., Leija, O. S. N., ... & Badam, A. (2021, October). The demikernel datapath os architecture for microsecond-scale datacenter systems. In Proceedings of the ACM SIGOPS 28th Symposium on Operating Systems Principles (pp. 195-211).
+4. Baumann, A., Barham, P., Dagand, P. E., Harris, T., Isaacs, R., Peter, S., ... & Singhania, A. (2009, October). The multikernel: a new OS architecture for scalable multicore systems. In Proceedings of the ACM SIGOPS 22nd symposium on Operating systems principles (pp. 29-44).
+
+ 
 
  
