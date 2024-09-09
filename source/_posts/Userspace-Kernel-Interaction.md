@@ -6,15 +6,13 @@ tags: notes
 ---
 
 
-# Advances in Userspace-Kernel Interaction in Operating Systems 
-
 ## Introduction 
 
 Userspace-kernel interaction is a key performance determinant in operating systems, particularly when considering the needs of modern distributed systems and datacenter environments. Traditional methods, like system calls, introduce significant overhead, leading to inefficiencies in I/O processing, context switching, and resource management. As applications demand higher throughput, lower latency, and more scalable solutions, researchers have explored novel approaches to optimizing the boundary between userspace and kernelspace. 
 
 This literature review explores four key developments aimed at improving userspace-kernel interaction: (1) optimizing dataplane operations to reduce kernel involvement, (2) speculative execution to hide latency in distributed systems, (3) kernel-bypass techniques for microsecond-scale I/O, and (4) modularizing kernel functions to enhance flexibility and performance. These approaches reflect ongoing efforts to redesign how operating systems manage interactions between userspace and kernelspace, providing new pathways for improved performance in modern computing. 
 
-Optimizing Dataplane Operations for Reduced Kernel Involvement 
+## Optimizing Dataplane Operations for Reduced Kernel Involvement 
 
 The first major strategy focuses on minimizing kernel intervention in network-related operations, particularly in high-performance environments like datacenters. Belay et al.'s IX operating system (2014) introduced a novel approach by decoupling the control plane and dataplane, effectively limiting the need for userspace-kernel context switching during network packet processing. IX operates primarily in userspace, ensuring efficient packet handling without the overhead of traditional system calls. This zero-copy API allows for efficient data movement without the typical latency penalties incurred by frequent transitions between userspace and kernelspace. 
 
