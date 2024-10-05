@@ -1,4 +1,4 @@
-**Rethinking AI Interaction: OpenAI's Canvas and the Future of User Engagement**
+# Rethinking AI Interaction: OpenAI's Canvas and the Future of User Engagement
 
 In the rapidly evolving world of artificial intelligence, the true breakthrough isn't just in the capabilities of the models but in how we interact with them. OpenAI's latest feature, **Canvas**, embodies this shift by offering a new approach to engaging with AI. While Canvas may not be the most groundbreaking feature at first glance, it signifies a crucial step toward reimagining our interaction with AI systems.
 
