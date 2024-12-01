@@ -258,7 +258,7 @@ widgets:
         # Names and URLs of the sites
         links:
             eunomia-bpf: https://eunomia.dev
-            Hexo: https://hexo.io
+            transchinese.org: https://transchinese.org
     # Categories widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
