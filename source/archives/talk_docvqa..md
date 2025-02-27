@@ -2,7 +2,7 @@
 
 ## Slide 1
 
-Hello everyone, my name is Yusheng Zheng, and I am here to present a work titled “DocMIA: Document-Level Membership Inference Attacks against DocVQA Models.” This research was conducted by Khanh Nguyen, Raouf Kerkouche, Mario Fritz, and Dimosthenis Karatzas. They investigated how Document Visual Question Answering systems, or DocVQA systems, can inadvertently leak private information about the training data. By the end of this talk, I hope you will see why DocVQA is useful, why it can pose risks to privacy, and how the authors’ proposed method, called DocMIA, can detect if a particular document was part of the training set for these models. Now, I would like to give an overview of what I will cover.
+Hello everyone, my name is Yusheng Zheng, and I am here to present a work titled “DocMIA: Document-Level Membership Inference Attacks against DocVQA Models.” This research was conducted by Khanh Nguyen, Raouf Kerkouche, Mario Fritz, and Dimosthenis Karatzas. They investigated how Document Visual Question Answering systems, or DocVQA systems, can leak private information about the training data. By the end of this talk, I hope you will see why DocVQA is useful, why it can pose risks to privacy, and how the authors’ proposed method, called DocMIA, can detect if a particular document was part of the training set for these models. Now, I would like to give an overview of what I will cover.
 
 ---
 
