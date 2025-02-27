@@ -26,13 +26,19 @@ On this slide, we see the general idea of how a DocVQA model operates. Typically
 
 ## Slide 5 
 
-DocVQA takes a document image together with a text-based query and generates an answer token by token. This makes it different from traditional classification tasks where we simply get a probability over a set of classes. In classical membership inference, an attacker often relies on those probability scores or the final loss to guess if a sample was in the training set. But DocVQA is multi-modal and produces an entire sequence of tokens, which means the usual single-step methods do not directly apply here. Another important point is that membership inference techniques often train what are called shadow models on large auxiliary datasets. But according to the authors, it is impractical to get big collections of real documents for shadow training because real documents are private and not as openly available. Therefore, we need membership inference methods that can work with multi-modal data and do not require large external datasets. Now, I will move on to the authors’ threat model and see exactly how they set up the problem.
+DocVQA takes a document image together with a text-based query and generates an answer token by token. This makes it different from traditional classification tasks where we simply get a probability over a set of classes. In classical membership inference, an attacker often relies on those probability scores or the final loss to guess if a sample was in the training set. But DocVQA is multi-modal and produces an entire sequence of tokens, which means the usual single-step methods do not directly apply here. 
+
+Another important point is that membership inference techniques often train what are called shadow models on large auxiliary datasets. But according to the authors, it is impractical to get big collections of real documents for shadow training because real documents are private and not as openly available. 
+
+Therefore, we need membership inference methods that can work with multi-modal data and do not require large external datasets. Now, I will move on to the authors’ threat model and see exactly how they set up the problem.
 
 ---
 
 ## Slide 6
 
-The authors define two main scenarios in which an attacker might attempt a membership inference attack. The first is white-box, where the attacker can see and manipulate all the model’s internal parameters and gradients. The second is black-box, where the attacker can only query the model with questions about a document and receive the generated answers, with no insight into the internal weights. In both scenarios, the objective is the same: figure out whether a particular document was in the training set. Because each document can appear multiple times in training with different questions, an attacker can potentially gather many signals from multiple queries. A big hurdle is that the attacker cannot rely on training a bunch of shadow models, because they lack access to a large public dataset of private documents. The authors instead create an unsupervised approach, meaning they do not rely on external labels or shadow training. Next, I will move on to how they tackle this problem in the white-box setting, where the attacker has the most information about the model’s internals.
+The authors define two main scenarios in which an attacker might attempt a membership inference attack. The first is white-box, where the attacker can see and manipulate all the model’s internal parameters and gradients. The second is black-box, where the attacker can only query the model with questions about a document and receive the generated answers, with no insight into the internal weights. In both scenarios, the objective is the same: figure out whether a particular document was in the training set. 
+
+Because each document can appear multiple times in training with different questions, an attacker can potentially gather many signals from multiple queries. A big hurdle is that the attacker cannot rely on training a bunch of shadow models, because they lack access to a large public dataset of private documents. The authors instead create an unsupervised approach, meaning they do not rely on external labels or shadow training. Next, I will move on to how they tackle this problem in the white-box setting, where the attacker has the most information about the model’s internals.
 
 ---
 
@@ -79,7 +85,17 @@ Moving on to the black-box scenario, they used the distillation approach describ
 
 ## Slide 13 
 
-In summary, the authors introduced DocMIA, the first method that specifically tackles document-level membership inference in DocVQA tasks. Their contributions include developing novel attacks that do not need extra auxiliary data in both white-box and black-box environments, and they achieve strong performance across different models, surpassing existing baseline approaches. This work highlights that repeated question-answer pairs can intensify the memorization of certain documents, so sensitive data is definitely at risk. For future research, they suggest exploring defenses, such as differential privacy or specialized ways to edit or prune models to remove memorized content. They also think this line of research might extend to other multimodal tasks, for instance, large vision–language models that generate paragraphs based on images, since the same membership-leakage principle might apply. Now, I will end with a brief thanks and see if you have any questions.
+In summary, the authors introduced DocMIA, the first method that specifically tackles document-level membership inference in DocVQA tasks. Their contributions include developing novel attacks that do not need extra auxiliary data in both white-box and black-box environments, and they achieve strong performance across different models, surpassing existing baseline approaches. This work highlights that repeated question-answer pairs can intensify the memorization of certain documents, so sensitive data is definitely at risk.
+
+One limitation of this paper is that while the authors highlight a serious privacy risk, they don’t actually propose or test any specific defenses against it.
+
+Another challenge is the computational cost of their approach. Their attack method involves fine-tuning the model or modifying document images to test for membership, which can be expensive—especially for large models. They do try to reduce this cost by introducing three optimization strategies, FL, FLLoRA, and IG, but even with these improvements, their method could still be difficult to scale in real-world applications where you might want to test a large number of documents.
+
+Finally, their attack assumes that the adversary knows, or can reasonably guess, the types of questions used during training. The authors argue that this is a reasonable assumption because documents often follow predictable formats—for example, invoices will have questions about totals or dates. However, in some cases, an attacker may not have this knowledge, which could reduce the success of the attack. If the actual training questions were very different from what the attacker expects, the attack might not work as well as reported in this paper.
+
+For future research, they suggest exploring defenses, such as differential privacy or specialized ways to edit or prune models to remove memorized content. 
+
+They also think this line of research might extend to other multimodal tasks, for instance, large vision–language models that generate paragraphs based on images, since the same membership-leakage principle might apply. Now, I will end with a brief thanks and see if you have any questions.
 
 ---
 
