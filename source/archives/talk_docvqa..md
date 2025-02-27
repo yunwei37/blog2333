@@ -2,7 +2,7 @@
 
 ## Slide 1
 
-Hello everyone, my name is Yusheng Zheng, and I am here to present a work titled “DocMIA: Document-Level Membership Inference Attacks against DocVQA Models.” This research was conducted by Khanh Nguyen, Raouf Kerkouche, Mario Fritz, and Dimosthenis Karatzas. They investigated how Document Visual Question Answering systems, or DocVQA systems, can leak private information about the training data. By the end of this talk, I hope you will see why DocVQA is useful, why it can pose risks to privacy, and how the authors’ proposed method, called DocMIA, can detect if a particular document was part of the training set for these models. Now, I would like to give an overview of what I will cover.
+Hello everyone, my name is Yusheng Zheng, and I am here to present a work titled “DocMIA: Document-Level Membership Inference Attacks against DocVQA Models.” This is a arxiv paper in this Febuary. They investigated how Document Visual Question Answering systems, or DocVQA systems, can leak private information about the training data. Now, I would like to give an overview of what I will cover.
 
 ---
 
@@ -38,7 +38,12 @@ The authors define two main scenarios in which an attacker might attempt a membe
 
 ## Slide 7
  
-In the white-box scenario, the authors propose an optimization-based method to detect membership. The idea is that if the model already saw a certain document during training, then the parameters are likely close to the optimum for that document’s question-answer pairs. By doing a small number of fine-tuning steps on just one of those question-answer pairs, the attacker can measure how quickly or how easily the model adapts. If it is a training document, the model converges with fewer updates or shows less shift in its weights because it has memorized or partially memorized that document. If it has not seen that document before, the model needs more effort to match the ground truth answer. This difference serves as a strong membership signal. The authors found that simple metrics like the final loss were not enough, but looking at the entire mini-fine-tuning trajectory revealed much better signals. Next, I will show how they reduced the computation by only fine-tuning certain parts of the model or even the document image itself.
+In the white-box scenario, the authors propose an gradient-based optimization method to detect membership. The idea is that if the model already saw a certain document during training, then the parameters are likely close to the optimized for that document’s question-answer pairs. 
+
+Specifically, they fine-tune the target DocVQA model on an individual document/question-answer pair and compute the distance required to reach the optimal answer. A small average distance means the document is likely part of the training set, while a larger distance means it's likely a non-training document. In addition, the number of optimization steps is an main feature that reflects the efficiency of the optimization process. If you have a good starting point from the target model and the learning rate is set well, training documents usually reach optimal results faster than non-training documents.
+
+Consequently, they include both the distance and the number of optimization steps in their feature set for white-box attacks.
+Next, I will show how they reduced the computation by only fine-tuning certain parts of the model or even the document image itself.
 
 ---
 
